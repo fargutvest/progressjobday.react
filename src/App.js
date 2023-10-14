@@ -24,9 +24,9 @@ function App() {
       <div>
         {hours - startWorkDayHour} ч
       </div>
-      <p/>
+      <p />
       <div>
-        До конца рабочего дня осталось:
+        Домой через:
       </div>
       <div>
         {9 - (hours - startWorkDayHour)} ч
