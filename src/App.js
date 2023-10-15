@@ -28,18 +28,18 @@ function App() {
     if (percent > 100)
       percent = 100;
 
-    elapsedCalc = Math.round(totalWorkedMinutes / 60) + " ч " + totalWorkedMinutes % 60 + "м";
+    elapsedCalc = Math.floor(totalWorkedMinutes / 60) + " ч " + totalWorkedMinutes % 60 + "м";
     if (totalRemainedMinutes <= 0)
       toHomePredict = "уже пора";
     else
-      toHomePredict = Math.round(totalRemainedMinutes / 60) + " ч  " + totalRemainedMinutes % 60 + "м";
+      toHomePredict = Math.floor(totalRemainedMinutes / 60) + " ч  " + totalRemainedMinutes % 60 + "м";
   }
 
 
   return (
     <div>
       <div>
-        {Math.round(percent)} %
+        {Math.floor(percent)} %
       </div>
       <Progress completed={percent} />
       <p />
