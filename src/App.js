@@ -13,16 +13,28 @@ function App() {
   let totalWorkedMinutes = hours * 60 + minutes - startWorkDayHour * 60;
 
   let totalRemainedMinutes = totalWorkingMinutes - totalWorkedMinutes;
+
+  let percent = "";
+  let elapsedCalc = "";
   let toHomePredict = "";
 
-  if (totalRemainedMinutes <= 0)
-    toHomePredict = "уже пора";
-  else  
-    toHomePredict = Math.round(totalRemainedMinutes / 60) + " ч  " + totalRemainedMinutes % 60 + "м";
 
-  let percent = totalWorkedMinutes / totalWorkingMinutes * 100;
-  if (percent > 100)
-    percent = 100;
+  if (totalWorkedMinutes < 0) {
+    percent = 0;
+    elapsedCalc = toHomePredict = "рабочий день еще не начался";
+  }
+  else {
+    percent = totalWorkedMinutes / totalWorkingMinutes * 100;
+    if (percent > 100)
+      percent = 100;
+
+    elapsedCalc = Math.round(totalWorkedMinutes / 60) + " ч " + totalWorkedMinutes % 60 + "м";
+    if (totalRemainedMinutes <= 0)
+      toHomePredict = "уже пора";
+    else
+      toHomePredict = Math.round(totalRemainedMinutes / 60) + " ч  " + totalRemainedMinutes % 60 + "м";
+  }
+
 
   return (
     <div>
@@ -35,7 +47,7 @@ function App() {
         С начала рабочего дня ({startWorkDayHour}:00) прошло:
       </div>
       <div>
-        {Math.round(totalWorkedMinutes / 60)} ч {totalWorkedMinutes % 60} м
+        {elapsedCalc}
       </div>
       <p />
       <div>
