@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/progressjobday.react/static/css/main.073c9b0a.css",
-    "main.js": "/progressjobday.react/static/js/main.8e64f0d3.js",
+    "main.js": "/progressjobday.react/static/js/main.0c52164a.js",
     "static/js/787.6b02c445.chunk.js": "/progressjobday.react/static/js/787.6b02c445.chunk.js",
     "index.html": "/progressjobday.react/index.html",
     "main.073c9b0a.css.map": "/progressjobday.react/static/css/main.073c9b0a.css.map",
-    "main.8e64f0d3.js.map": "/progressjobday.react/static/js/main.8e64f0d3.js.map",
+    "main.0c52164a.js.map": "/progressjobday.react/static/js/main.0c52164a.js.map",
     "787.6b02c445.chunk.js.map": "/progressjobday.react/static/js/787.6b02c445.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.8e64f0d3.js"
+    "static/js/main.0c52164a.js"
   ]
 }
